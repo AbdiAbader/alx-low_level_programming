@@ -1,0 +1,21 @@
+#include <stdio.h>
+/**
+ * prints in lower case
+ *
+ *
+ */
+
+int main()
+{
+  int alpha;
+  char c;
+
+ for(alpha=122; alpha>=97; alpha--)
+    {
+      putchar(alpha);
+	}
+ putchar('\n');
+  return (0);
+}
+
+

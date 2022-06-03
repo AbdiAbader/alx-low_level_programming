@@ -1,0 +1,24 @@
+#include <stdio.h>
+/**
+ *lower and upper case
+ *
+ *Abdi
+ */
+int main()
+{
+  char c;
+  int i;
+  int j;
+  for(i=97; i<=122;i++)
+    {
+      c=i;
+      putchar(c);
+    }
+  for(j=65; j<=91;j++)
+    {
+      c=j;
+      putchar(c);
+    }
+  putchar('\n');
+  return (0);
+}
