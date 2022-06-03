@@ -1,16 +1,17 @@
 #include <stdio.h>
+
 /**
- * base 10 numbers
+ * main - Entry point
  *
- * Abdi
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-  int base;
-  for(base=0; base<10; base++)
-    {
-      printf("%i",base);
-    }
-  printf("\n");
-  return (0);
+int base;
+for (base = 0; base < 10; base++)
+{
+printf("%i", base);
+}
+printf("\n");
+return (0);
 }

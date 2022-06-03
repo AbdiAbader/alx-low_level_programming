@@ -1,20 +1,19 @@
 #include <stdio.h>
-/**
- * prints in lower case
- *
- *
- */
 
-int main()
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-  int alpha;
-  
- for(alpha=122; alpha>=97; alpha--)
-    {
-      putchar(alpha);
-	}
- putchar('\n');
-  return (0);
+int alpha;
+for (alpha = 122; alpha >= 97; alpha--)
+{
+putchar(alpha);
+}
+putchar('\n');
+return (0);
 }
 
 

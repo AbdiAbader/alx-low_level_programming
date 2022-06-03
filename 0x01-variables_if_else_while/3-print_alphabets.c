@@ -1,24 +1,22 @@
 #include <stdio.h>
+
 /**
- *lower and upper case
+ * main - Entry point
  *
- *Abdi
+ * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
-  char c;
-  int i;
-  int j;
-  for(i=97; i<=122;i++)
-    {
-      c=i;
-      putchar(c);
-    }
-  for(j=65; j<=90;j++)
-    {
-      c=j;
-      putchar(c);
-    }
-  putchar('\n');
-  return (0);
+int i;
+int j;
+for (i = 97; i <= 122; i++)
+{
+putchar(i);
+}
+for (j = 65; j <= 90; j++)
+{
+putchar(j);
+}
+putchar('\n');
+return (0);
 }
