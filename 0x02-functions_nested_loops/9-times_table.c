@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-*times_table - print time table
+ *times_table - print time table
  *
- *Return: printing time table 
+ *Return: printing time table
  */
 void times_table(void)
 {
@@ -12,21 +12,23 @@ for (ab = 0; ab <= 9; ab++)
 for (di = 0; di <= 9; di++)
 {
 multi = ab * di;
+if (di != 0)
+{
+_putchar(',');
+_putchar(32);
+}
 if (multi > 9)
 {
 ab1 = multi / 10;
 di1 = multi % 10;
-_putchar(ab1 + '0');
-_putchar(di1 + '0');
+_putchar(ab1 + 48);
+_putchar(di1 + 48);
 }
 else
 {
-_putchar(multi + '0');  
-}
-if (di != 9)
-{
-_putchar(',');
-_putchar(' ');
+if (di != 0)
+_putchar(32);
+_putchar(multi + '0');
 }
 }
 _putchar('\n');
