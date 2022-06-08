@@ -28,10 +28,10 @@ _putchar((multi % 10) + '0');
 if (multi > 99)
 {
 _putchar((multi / 100) + 48);
-_putchar(((multi / 10) / 10) + 48);
+_putchar(((multi / 10) % 10) + 48);
 _putchar((multi % 10) + 48);
 }
-else if ( multi <= 9)
+else if (multi <= 9)
 {
 if (di != 0)
 {
