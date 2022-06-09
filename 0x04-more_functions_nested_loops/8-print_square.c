@@ -2,8 +2,8 @@
 /**
  *print_square - print square with *.
  *@size: number of # in the square.
- *Return: void 
- */
+ *Return: void
+*/
 void print_square(int size)
 {
 int i, j;

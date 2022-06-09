@@ -30,7 +30,7 @@ continue;
 printf("Buzz ");
 continue;
 }
-printf("%i ",a);
+printf("%i ", a);
 }
 printf("\n");
 return (0);
