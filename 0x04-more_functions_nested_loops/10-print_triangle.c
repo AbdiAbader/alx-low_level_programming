@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *print_triangle - in triangle shape
+ * print_triangle - in triangle shape
  *@size : numbers of #
  *
  *Return: Always 0.
@@ -16,10 +16,12 @@ for (i = a; i < size; i++)
 {
 _putchar(32);
 }
-for (b = i; b <= i; b++)
+for (b = 1; b <= a; b++)
 {
 _putchar(35);
 }
+if (a != size)
+_putchar('\n');
 }
 }
 _putchar('\n');
