@@ -16,7 +16,7 @@ continue;
 }
 if ((a % 5) == 0)
 {
-printf("Buzz");
+printf("Buzz ");
 continue;
 }
 printf("%d ",a);
