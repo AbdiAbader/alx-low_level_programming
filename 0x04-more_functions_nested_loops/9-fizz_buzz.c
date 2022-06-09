@@ -16,6 +16,11 @@ continue;
 }
 if ((a % 5) == 0)
 {
+if (a == 100)
+{
+printf("Buzz");
+continue;
+}
 printf("Buzz ");
 continue;
 }
