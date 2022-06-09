@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main - print number to 100 replace number devisible by 3 - fizz and 5 -Buzz.
+ *main - print number to 100 replace number devisible by 3 - fizz and 5 -Buzz.
  *
  *Return: 0 if success
  */
@@ -24,7 +24,7 @@ continue;
 printf("Buzz ");
 continue;
 }
-printf("%d ",a);
+printf("%i ",a);
 }
 printf("\n");
 return (0);
