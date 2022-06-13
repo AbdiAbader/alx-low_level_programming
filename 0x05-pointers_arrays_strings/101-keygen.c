@@ -5,10 +5,10 @@ int main(void)
 {
 int a = 33, b = 122, i;
 srand(time(0));
-for (i = 0; i < 15 ; i++)
+for (i = 0; i < 14 ; i++)
 {
-  putchar(rand() % ((a-b)+1)-a);
- }
- printf("\n");
- return (0);
+ putchar(rand() % ((a-b)+1)-a);
+}
+printf("\n");
+return (0);
 }
