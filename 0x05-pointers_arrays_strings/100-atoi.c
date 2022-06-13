@@ -23,13 +23,8 @@ if (*s >= 48 && *s <= 57)
 num = num * 10 + *s - 48;
 s++;
 }
-if (*s >= 48 && *s <= 57)
-continue;
 else
-break;
-}
 return (num *sign);
 }
-else
 return (0);
 }
