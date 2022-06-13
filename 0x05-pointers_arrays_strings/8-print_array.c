@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
- /**
- *print_array - print_array in there order to the n .
-*@a: pointer
- *@n: integer input
- *Return: void
+/**
+ * print_array - prints n elements of an array of integers,
+ * followed by a new line and comma.
+ *@a: pointer
+ *@n: integer inpu
 */
 void print_array(int *a, int n)
 {
