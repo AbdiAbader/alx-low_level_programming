@@ -9,11 +9,10 @@
 int main(void)
 {
   int ab[9]={32, 33, 35, 36, 38, 42, 63, 64, 94};
-  int  i,j, r = 0;
+  int  i, r = 0;
 srand(time(0));
  r= rand() % 4;
- for(j=1;j<20;j++){
-for (i = 1; i < 15 ; i++)
+for (i = 1; i < 100 ; i++)
 {
 if(r == 1)
 {
@@ -39,6 +38,6 @@ else
  
  }
 printf("\n");
- }
+ 
 return (0);
 }
