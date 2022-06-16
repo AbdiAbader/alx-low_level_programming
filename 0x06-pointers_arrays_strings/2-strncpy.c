@@ -2,23 +2,24 @@
 /**
  *_strncpy - copys to n length
  *@dest:destination of copy
- *@src:source string 
+ *@src:source string
  *@n: integer length of copy
  *Return: O for success
  */
 char *_strncpy(char *dest, char *src, int n)
 {
 char *p;
-int i;
+int a;
 p = dest;
-for (i = 0; i < n; i++)
+for (a = 0; a < n && *src != '\0'; a++)
 {
-if (*src != '\0')
-{
-*dest= *src;
+dest[a] = *src;
 src++;
-dest++;
 }
+while (a < n)
+{
+dest[a] = '\0';
+a++;
 }
 return (p);
 }
