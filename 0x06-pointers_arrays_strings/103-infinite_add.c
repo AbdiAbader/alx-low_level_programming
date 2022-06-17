@@ -11,17 +11,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int a = 0, b = 0, d = 0, i = 0, h = 0;
 while (n1[a])
-{
 a++;
-}
 while (n2[b])
-{
 b++;
-}
 if (a > size_r || b > size_r)
-{
 return (0);
-}
 --a;
 --b;
 for (d = 0; d < size_r - 1; d++)
