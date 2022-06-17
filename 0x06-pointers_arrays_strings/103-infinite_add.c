@@ -1,11 +1,8 @@
 #include "main.h"
 /**
- *infinite_add - add two  numbers.
  *reverse - reverse the array.
- *@n1: input character
- *@n2: input character
- *@r: store add in buffer
- *@size_r: size of the buffer
+ *@d: input character
+ *@re: input character
  *Return: buffer
  */
 char *reverse(char *re, int d)
@@ -19,6 +16,15 @@ d--;
 }
 return (re);
 }
+/**                                                                                                                                   
+ *infinite_add - add two  numbers.                                                                                                    
+ *reverse - reverse the array.                                                                                                        
+ *@n1: input character                                                                                                                
+ *@n2: input character                                                                                                                
+ *@r: store add in buffer                                                                                                             
+ *@size_r: size of the buffer                                                                                                         
+ *Return: buffer
+*/ 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int a = 0, b = 0, d = 0, i = 0, h = 0;
