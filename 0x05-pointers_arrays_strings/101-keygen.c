@@ -41,8 +41,10 @@ else
  }
     }
   else
+    {
+      printf("\n");
       printf("Tada! Congrats");
- }
+    }}
 printf("\n");
  
 return (0);
