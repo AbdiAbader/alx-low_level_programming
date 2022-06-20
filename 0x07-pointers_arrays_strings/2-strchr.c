@@ -7,6 +7,7 @@
  */
 char *_strchr(char *s, char c)
 {
+char *NULL = '\0';
 char *p;
 while (s)
 {
@@ -17,5 +18,5 @@ return (p);
 }
 s++;
 }
-return (0);
+return (NULL);
 }
