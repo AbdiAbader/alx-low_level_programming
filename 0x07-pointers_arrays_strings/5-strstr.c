@@ -18,7 +18,6 @@ if (haystack[i] == needle[j])
 if (f == 0)
 p = haystack + i;
 f++;
-break;
 }
 else
 {
