@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *reverse - reverse the array.
+ *infinite_add - reverse the array.
  *@n1: input character
  *@n2: input character
  *@r: string holder
@@ -9,7 +9,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int a = 0, b = 0, d = 0, i = 0, h = 0;
+int a = 0, b = 0, d = 0, i = 0, h = 0, rev, temprev = 0;
 while (n1[a])
 a++;
 while (n2[b])
@@ -36,5 +36,12 @@ r[d] = '\0';
 if (a >= 0 || b >= 0 || h != 0)
 return (0);
 d--;
+for (rev = 0; rev < d; rev++)
+{
+temprev = r[d];
+r[d] = r[rev];
+r[rev] = temprev;
+d--;
+}
 return (r);
 }
