@@ -12,6 +12,4 @@ s++;
 _print_rev_recursion(s);
 _putchar(*(s - 1));
 }
-else
-_putchar('\0');
 }
