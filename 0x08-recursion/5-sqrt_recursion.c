@@ -5,7 +5,7 @@
  *@n: integer from sqrt function
  *Return: squre root or -1 if not
  */
-int helpsqrt(int x, int n)
+int helpsqrt(long int x, long int n)
 {
 if (x * x == n)
 return (x);
@@ -22,9 +22,9 @@ return (-1);
  *@n: input  integer
  *Return: natuaral square root if not -1
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(long int n)
 {
-int x, r;
+long int x, r;
 x = n / 3;
 if (n == 1)
 return (1);
