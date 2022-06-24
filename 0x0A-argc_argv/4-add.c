@@ -9,18 +9,21 @@
  */
 int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv)
 {
-int i = 1, add = 0;
+int i = 1, add = 0, j = 0;
 while (i < argc)
 {
-if (isdigit(*(argv[i])) == 0)
+while (argv[i][j] != '\0')
+{
+if ((isdigit(argv[i][j]) == 0))
 {
 printf("Error\n");
 return (1);
 }
-if (atoi(argv[i]))
+j++;
+}
 add += atoi(argv[i]);
 i++;
 }
-printf("%i\n", add);
+printf("%d\n", add);
 return (0);
 }
