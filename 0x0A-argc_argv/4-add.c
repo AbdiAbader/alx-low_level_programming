@@ -12,7 +12,7 @@ int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv)
 int i = 1, add = 0;
 while (i < argc)
 {
-if ((*(argv[i]) < '0') || (*(argv[i]) > '9'))
+if (isdigit(*(argv[i])) == 0)
 {
 printf("Error\n");
 return (1);
