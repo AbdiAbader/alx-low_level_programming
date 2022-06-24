@@ -14,7 +14,7 @@ while (i < argc)
 {
 if (atoi(argv[i]))
 add += atoi(argv[i]);
-if (*argv[i] == '0')
+else if (*argv[i] == '0')
 add += atoi(argv[i]);
 else
 {
