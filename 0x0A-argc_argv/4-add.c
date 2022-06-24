@@ -10,6 +10,11 @@
 int main(__attribute__((unused)) int argc, __attribute__((unused)) char **argv)
 {
 int i = 1, add = 0;
+if (argc == 2)
+{
+printf("Error\n");
+return (1);
+}
 while (i < argc)
 {
 if (atoi(argv[i]))
