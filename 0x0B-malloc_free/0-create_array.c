@@ -13,8 +13,8 @@ if (size == 0)
 return ('\0');
 p = malloc(sizeof(char) * size);
 p[0] = c;
-if (p == '\0')
-return (0);
-else
+if (p)
 return (p);
+else
+return (0);
 }
