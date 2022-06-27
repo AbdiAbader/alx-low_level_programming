@@ -19,7 +19,7 @@ for (b = 0; av[a][b] != '\0'; b++)
 d++;
 }
 }
-new = malloc(sizeof(char) * (d + ac));
+new = malloc(sizeof(char) * (d + ac + 1));
 if (new == NULL)
 {
 free(new);
