@@ -19,10 +19,16 @@ if (p == NULL)
 return (0);
 else
 {
+if (*s1 != NULL)
+{
 for (a = 0; a < j; a++)
 p[a] = s1[a];
+}
+if (*s2 != NULL)
+{
 for (a = 0; a < i; a++)
 p[a + j] = s2[a];
+}
 return (p);
 }
 }
