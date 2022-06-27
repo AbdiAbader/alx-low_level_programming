@@ -9,12 +9,19 @@
 char *create_array(unsigned int size, char c)
 {
 char *p;
+unsigned int a = 0;
 if (size == 0)
 return ('\0');
 p = malloc(sizeof(char) * size);
-p[0] = c;
-if (p)
-return (p);
+if (p == NULL)
+return (NULL);
 else
-return (0);
+{
+while (a < size)
+{
+p[a] = c;
+a++;
+}
+}
+return (p);
 }
