@@ -13,14 +13,17 @@ if (str == NULL)
 return (NULL);
 while (str[j] != '\0')
 j++;
+j++;
 p = malloc(sizeof(char) * j);
+if (p == NULL)
+return (0);
+else
+{
 while (i < j)
 {
 p[i] = str[i];
 i++;
 }
-if (p == NULL)
-return (0);
-else
 return (p);
+}
 }
