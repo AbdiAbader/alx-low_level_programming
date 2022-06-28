@@ -32,8 +32,6 @@ char **new;
 int i = 0,  c = 0, d;
 if (str == NULL || str[0] == '\0')
 return (NULL);
-if (str[0] == ' ' && str[1] == '\0')
-return (NULL);
 for (d = 0; str[d] != '\0'; d++)
 {
 if (d == 0 && str[d] != ' ')
@@ -41,6 +39,8 @@ c++;
 if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 c++;
 }
+if (c == 0)
+return (NULL);
 new = malloc(sizeof(char *) * c + 1);
 if (new == NULL)
 {
