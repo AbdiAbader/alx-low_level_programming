@@ -17,7 +17,7 @@ while (str[x] != ' ')
 x++;
 len++;
 }
-new[i] = (char *)malloc(sizeof(char) * len + 1);
+new[i] = (char *)malloc(sizeof(char) * len);
 if (new[i] == NULL)
 {
 for (a = 0; a <= i; a++)
