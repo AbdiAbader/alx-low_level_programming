@@ -10,7 +10,7 @@
  */
 void cal(char *str, char **new, int s, int i)
 {
-int x, len = 0, b;
+int x, len = 0, a, b;
 x = s;
 while (str[x] != ' ')
 {
@@ -73,7 +73,7 @@ i++;
 continue;
 }
 }
- new[c+1] = NULL;
+new[c+1] = NULL;
 return (new);
 }
 }
