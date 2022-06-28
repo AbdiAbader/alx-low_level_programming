@@ -30,6 +30,7 @@ new[i][b] = str[s];
 s++;
 }
 new[i][b++] = '\0';
+ free(new[i+1]);
 }
 /**
  *strtow - words to array
@@ -70,8 +71,6 @@ if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 {
 cal(str, new, d + 1, i);
 i++;
-continue;
-}
 }
 return (new);
 }
