@@ -1,25 +1,37 @@
 #include <stdlib.h>
 #include "main.h"
-void cal(char *str, char **new, int s,int i)
+/**
+ *cal - works assigning and creating arrays
+ *@str: string
+ *@new: 2d array
+ *@s: integer
+ *@i: integer
+ *Return: void
+ */
+void cal(char *str, char **new, int s, int i)
 {
-  int x, len = 0, a, b;
+int x, len = 0, a, b;
 x = s;
 while (str[x] != ' ')
 {
 x++;
 len++;
 }
-new[i] =(char *)malloc(sizeof(char) * len + 1);
+new[i] = (char *)malloc(sizeof(char) * len + 1);
+if (new[i] == NULL)
+{
+for (a = 0; a <= i; a++)
+free(new[a];
+}
 for (a = i; a <= i; a++)
 {
 for (b = 0; b < len; b++)
-  {
-  new[a][b] = str[s];
-  s++; 
+{
+new[a][b] = str[s];
+s++;
 }
 new[a][b] = '\0';
 }
-  
 }
 /**
  *strtow - words to array
