@@ -34,7 +34,7 @@ int i = 0,  c = 0, d;
    return (NULL);
 for (d = 0; str[d] != '\0'; d++)
 {
-if (str[0] != ' ' && str[0] != '\0')
+if (d == 0 && str[d] != ' ')
 c++;
 if (str[d] == ' ' && (str[d+1] != ' ' && str[d+1] != '\0'))
 c++;
@@ -49,8 +49,10 @@ else
 {
 for (d = 0; str[d] != '\0'; d++)
 {
-  if (str[0] != ' ' && str[0] != '\0')
-    i++;
+  if (d == 0 && str[d] != ' ')
+    {cal(str,new,d,i);
+      i++;
+    }
   if (str[d] == ' ' && (str[d+1] != ' ' && str[d+1] != '\0'))
   {  cal(str,new,d + 1,i);
     i++;
