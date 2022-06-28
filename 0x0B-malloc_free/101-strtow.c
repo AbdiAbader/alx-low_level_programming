@@ -72,6 +72,7 @@ if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 cal(str, new, d + 1, i);
 i++;
 }
+}
 return (new);
 }
 }
