@@ -22,6 +22,7 @@ if (new[i] == NULL)
 {
 for (a = 0; a <= i; a++)
 free(new[a]);
+free(new);
 }
 for (a = i; a <= i; a++)
 {
