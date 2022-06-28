@@ -73,7 +73,7 @@ i++;
 continue;
 }
 }
-new[c + 1] = NULL;
+ free(new[c + 1]);
 return (new);
 }
 }
