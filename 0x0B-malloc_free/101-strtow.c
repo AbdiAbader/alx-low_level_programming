@@ -30,9 +30,15 @@ char **strtow(char *str)
 {
 char **new;
 int i = 0,  c = 0, d;
+ if (str == NULL || str[0] == '\0')
+   return (NULL);
 for (d = 0; str[d] != '\0'; d++)
-  if (str[d] == ' ' && (str[d+1] != ' ' && str[d+1] != '\0'))
+{
+if (str[0] != ' ' && str[0] != '\0')
 c++;
+if (str[d] == ' ' && (str[d+1] != ' ' && str[d+1] != '\0'))
+c++;
+  }
 new = malloc(sizeof(char*) * c + 1);
 if (new == NULL)
 {
@@ -43,6 +49,8 @@ else
 {
 for (d = 0; str[d] != '\0'; d++)
 {
+  if (str[0] != ' ' && str[0] != '\0')
+    i++;
   if (str[d] == ' ' && (str[d+1] != ' ' && str[d+1] != '\0'))
   {  cal(str,new,d + 1,i);
     i++;
