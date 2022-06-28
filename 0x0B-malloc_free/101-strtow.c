@@ -30,7 +30,6 @@ new[i][b] = str[s];
 s++;
 }
 new[i][b++] = '\0';
- new[i] = NULL;
 }
 /**
  *strtow - words to array
