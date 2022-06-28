@@ -21,7 +21,7 @@ new[i] = (char *)malloc(sizeof(char) * len + 1);
 if (new[i] == NULL)
 {
 for (a = 0; a <= i; a++)
-free(new[a];
+  free(new[a]);
 }
 for (a = i; a <= i; a++)
 {
