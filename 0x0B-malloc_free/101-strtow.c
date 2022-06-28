@@ -17,19 +17,22 @@ while (str[x] != ' ')
 x++;
 len++;
 }
-new[i] = (char *)malloc(sizeof(char) * len);
+new[i] = (char *)malloc(sizeof(char) * len + 1);
 if (new[i] == NULL)
 {
 for (a = 0; a <= i; a++)
 free(new[a]);
 free(new);
 }
+else
+{
 for (b = 0; b < len; b++)
 {
 new[i][b] = str[s];
 s++;
 }
 new[i][b++] = '\0';
+}
 }
 /**
  *strtow - words to array
@@ -51,7 +54,7 @@ c++;
 }
 if (c == 0)
 return (NULL);
-new = malloc(sizeof(char *) * c + 1);
+new = (char **)malloc(sizeof(char *) * c + 1);
 if (new == NULL)
 {
 free(new);
