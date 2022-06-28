@@ -74,7 +74,7 @@ i++;
 continue;
 }
 }
- free(new[c]);
+ free(new[c - 1]);
 return (new);
 }
 }
