@@ -75,6 +75,7 @@ i++;
 continue;
 }
 }
+ new[c+1] = NULL;
 return (new);
 }
 }
