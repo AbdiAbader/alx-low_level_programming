@@ -30,6 +30,7 @@ new[i][b] = str[s];
 s++;
 }
 new[i][b] = '\0';
+
 }
 /**
  *strtow - words to array
@@ -73,7 +74,7 @@ i++;
 continue;
 }
 }
- free(new[c + 1]);
+ free(new[c]);
 return (new);
 }
 }
