@@ -49,7 +49,7 @@ c++;
 if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 c++;
 }
- c++;
+c++;
 if (c == 0)
 return (NULL);
 new = malloc(sizeof(char *) * c);
@@ -58,9 +58,8 @@ if (new == NULL)
 free(new);
 return (NULL);
 }
- else
-   {
-new[c - 1] = NULL;
+else
+{
 for (d = 0; str[d] != '\0'; d++)
 {
 if (d == 0 && str[d] != ' ')
