@@ -49,10 +49,9 @@ c++;
 if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 c++;
 }
-c++;
 if (c == 0)
 return (NULL);
-new = malloc(sizeof(char *) * c);
+new = malloc(sizeof(char *) * c + 1);
 if (new == NULL)
 {
 free(new);
@@ -74,7 +73,7 @@ i++;
 continue;
 }
 }
-new[c+1] = NULL;
+new[c + 1] = NULL;
 return (new);
 }
 }
