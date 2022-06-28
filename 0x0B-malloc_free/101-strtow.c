@@ -10,7 +10,7 @@
  */
 void cal(char *str, char **new, int s, int i)
 {
-int x, len = 0, a, b;
+int x, len = 0, b;
 x = s;
 while (str[x] != ' ')
 {
@@ -24,15 +24,12 @@ for (a = 0; a <= i; a++)
 free(new[a]);
 free(new);
 }
-for (a = i; a <= i; a++)
-{
 for (b = 0; b < len; b++)
 {
-new[a][b] = str[s];
+new[i][b] = str[s];
 s++;
 }
- new[a][b] = '\0';
-}
+new[i][b] = '\0';
 }
 /**
  *strtow - words to array
