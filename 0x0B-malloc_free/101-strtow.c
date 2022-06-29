@@ -31,7 +31,6 @@ for (b = 0; b < len; b++)
 new[i][b] = str[s];
 s++;
 }
-new[i][b] = '\0';
 }
 }
 /**
