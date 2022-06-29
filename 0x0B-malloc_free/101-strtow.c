@@ -57,7 +57,6 @@ return (NULL);
 new = (char **)malloc(sizeof(char *) * c + 1);
 if (new == NULL)
 {
-free(new);
 return (NULL);
 }
 else
@@ -66,15 +65,21 @@ for (d = 0; str[d] != '\0'; d++)
 {
 if (d == 0 && str[d] != ' ')
 {
-cal(str, new, d, i);
+if (i < c+1)
+  {
+    cal(str, new, d, i);
 i++;
 }
+ }
 if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 {
+  if (i < c +1)
+    {
 cal(str, new, d + 1, i);
 i++;
-}
-}
+    }
+ }
+ }
 return (new);
 }
 }
