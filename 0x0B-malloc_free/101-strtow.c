@@ -12,7 +12,7 @@ void cal(char *str, char **new, int s, int i)
 {
 int x, len = 0, a, b;
 x = s;
-while (str[x] != ' ')
+while (str[x] != ' ' && str[x] != '\0')
 {
 x++;
 len++;
@@ -31,7 +31,7 @@ for (b = 0; b < len; b++)
 new[i][b] = str[s];
 s++;
 }
-new[i][b++] = '\0';
+new[i][b] = '\0';
 }
 }
 /**
@@ -54,7 +54,7 @@ c++;
 }
 if (c == 0)
 return (NULL);
-new = (char **)malloc(sizeof(char *) * c + 1);
+new = malloc(sizeof(char *) * c + 1);
 if (new == NULL)
 {
 return (NULL);
@@ -65,21 +65,15 @@ for (d = 0; str[d] != '\0'; d++)
 {
 if (d == 0 && str[d] != ' ')
 {
-if (i < c+1)
-  {
-    cal(str, new, d, i);
+cal(str, new, d, i);
 i++;
 }
- }
 if (str[d] == ' ' && (str[d + 1] != ' ' && str[d + 1] != '\0'))
 {
-  if (i < c +1)
-    {
 cal(str, new, d + 1, i);
 i++;
-    }
- }
- }
+}
+}
 return (new);
 }
 }
