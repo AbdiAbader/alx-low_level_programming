@@ -31,7 +31,7 @@ for (b = 0; b < len; b++)
 new[i][b] = str[s];
 s++;
 }
-new[i][b++] = '\0';
+new[i][b] = '\0';
 }
 }
 /**
@@ -57,6 +57,7 @@ return (NULL);
 new = malloc(sizeof(char *) * c + 1);
 if (new == NULL)
 {
+free(new);
 return (NULL);
 }
 else
@@ -74,6 +75,7 @@ cal(str, new, d + 1, i);
 i++;
 }
 }
+new[c + 1] = NULL;
 return (new);
 }
 }
