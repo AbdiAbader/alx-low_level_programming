@@ -31,13 +31,13 @@ return (NULL);
 }
 if (new_size > old_size)
 {
-point = malloc(sizeof(*ptr_copy) * new_size);
+new = ptr;
+point = malloc(sizeof(*new) * new_size);
 if (point == NULL)
 {
 free(point);
 return (NULL);
 }
-new = ptr;
 copy = point;
 for (i = 0; i < new_size; i++)
 {
