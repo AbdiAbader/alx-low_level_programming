@@ -45,7 +45,6 @@ if (new[i] != '\0')
 break;
 copy[i] = new[i];
 }
-copy[i++] = '\0';
 }
 free(ptr);
 return (copy);
