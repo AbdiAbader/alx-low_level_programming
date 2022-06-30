@@ -39,10 +39,8 @@ free(ptr);
 return (NULL);
 }
 copy = point;
-for (i = 0; i < new_size; i++)
+for (i = 0; i < new_size && i < old_size; i++)
 {
-if (new[i] != '\0')
-break;
 copy[i] = new[i];
 }
 }
