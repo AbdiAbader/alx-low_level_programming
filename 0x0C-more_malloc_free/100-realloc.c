@@ -14,6 +14,16 @@ void *point;
 char *copy, *new;
 if (old_size == new_size)
 return (ptr);
+if (ptr == NULL)
+{
+copy = malloc(new_size);
+if (copy == NULL)
+{
+free(copy);
+return (NULL);
+}
+return (copy);
+}
 if (new_size == 0 && ptr != NULL)
 {
 free(ptr);
