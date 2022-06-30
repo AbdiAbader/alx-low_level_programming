@@ -16,13 +16,13 @@ if (old_size == new_size)
 return (ptr);
 if (ptr == NULL)
 {
-copy = malloc(new_size);
-if (copy == NULL)
+point = malloc(new_size);
+if (point == NULL)
 {
-free();
+free(point);
 return (NULL);
 }
-return (copy);
+return (point);
 }
 if (new_size == 0 && ptr != NULL)
 {
