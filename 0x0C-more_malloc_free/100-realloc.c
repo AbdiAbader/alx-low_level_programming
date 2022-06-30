@@ -31,7 +31,7 @@ return (NULL);
 }
 if (new_size > old_size)
 {
-point = malloc(new_size);
+point = malloc(sizeof(*ptr_copy) * new_size);
 if (point == NULL)
 {
 free(point);
