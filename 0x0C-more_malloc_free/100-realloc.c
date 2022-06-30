@@ -19,7 +19,7 @@ if (ptr == NULL)
 copy = malloc(new_size);
 if (copy == NULL)
 {
-free(copy);
+free();
 return (NULL);
 }
 return (copy);
@@ -35,7 +35,7 @@ new = ptr;
 point = malloc(sizeof(*new) * new_size);
 if (point == NULL)
 {
-free(point);
+free(ptr);
 return (NULL);
 }
 copy = point;
@@ -47,5 +47,5 @@ copy[i] = new[i];
 }
 }
 free(ptr);
-return (copy);
+return (point);
 }
