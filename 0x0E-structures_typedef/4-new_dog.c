@@ -39,7 +39,7 @@ len = length(name);
 copy->name = malloc(sizeof(char) * len + 1);
 if (copy->name == NULL)
 {
-free(copy->name);
+free(copy);
 return (NULL);
 }
 
@@ -55,7 +55,7 @@ copy->age = age;
 copy->owner = malloc(sizeof(char) * len + 1);
 if (copy->owner == NULL)
 {
-free(copy->owner);
+free(copy);
 return (NULL);
 }
 
