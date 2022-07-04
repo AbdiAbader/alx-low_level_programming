@@ -35,6 +35,12 @@ return (NULL);
 }
 len = length(name);
 copy->name = malloc(sizeof(char) * len + 1);
+if (copy->name == NULL)
+{
+free(copy->name);
+return (NULL);
+}
+
 while (name[i] != '\0')
 {
 copy->name[i] = name[i];
@@ -45,6 +51,12 @@ i = 0;
 len = length(owner);
 copy->age = age;
 copy->owner = malloc(sizeof(char) * len + 1);
+if (copy->owner == NULL)
+{
+free(copy->owner);
+return (NULL);
+}
+
 while (owner[i] != '\0')
 {
 copy->owner[i] = owner[i];
