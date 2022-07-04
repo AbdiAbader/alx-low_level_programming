@@ -55,6 +55,7 @@ copy->age = age;
 copy->owner = malloc(sizeof(char) * len + 1);
 if (copy->owner == NULL)
 {
+free(copy->name);
 free(copy);
 return (NULL);
 }
