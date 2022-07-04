@@ -48,7 +48,7 @@ while (name[i] != '\0')
 copy->name[i] = name[i];
 i++;
 }
-copy->name[i] = '\0';
+copy->name[i++] = '\0';
 i = 0;
 len = length(owner);
 copy->age = age;
@@ -64,6 +64,6 @@ while (owner[i] != '\0')
 copy->owner[i] = owner[i];
 i++;
 }
-copy->owner[i] = '\0';
+copy->owner[i++] = '\0';
 return (copy);
 }
