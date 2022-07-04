@@ -36,6 +36,7 @@ copy->name[i] = name[i];
 i++;
 }
 copy->name[i] = name[i];
+i = 0;
 len = length(owner);
 copy->owner = malloc(sizeof(char) * len + 1);
 while (owner[i] != '\0')
