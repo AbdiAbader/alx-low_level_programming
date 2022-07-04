@@ -1,6 +1,11 @@
 #include "dog.h"
 #include <stdlib.h>
 int length(char *temp);
+/**
+ *length - counts length of string
+ *@temp: string
+ *Return: length of stirng
+ */
 int length(char *temp)
 {
 int len = 0, i = 0;
@@ -38,6 +43,7 @@ i++;
 copy->name[i] = name[i];
 i = 0;
 len = length(owner);
+copy->age = age;
 copy->owner = malloc(sizeof(char) * len + 1);
 while (owner[i] != '\0')
 {
@@ -45,6 +51,5 @@ copy->owner[i] = owner[i];
 i++;
 }
 copy->owner[i] = owner[i];
-copy->age = age;
 return (copy);
 }
