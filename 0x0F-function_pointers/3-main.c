@@ -16,7 +16,7 @@ printf("%i Error\n", argc);
 exit(98);
 }
 o = argv[2];
-if (get_op_func(o) == NULL || op[1] != '\0')
+if (get_op_func(o) == NULL || o[1] != '\0')
 {
 printf("Error\n");
 exit(99);
