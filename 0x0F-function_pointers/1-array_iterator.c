@@ -2,6 +2,7 @@
 /**
  *array_iterator - iterator each elements in aray to pointer function
  *@size: size_t
+ *@array: array
  *@action: pointer to function
  *Retrum: Nothing
  */
