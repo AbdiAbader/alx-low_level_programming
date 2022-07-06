@@ -23,7 +23,12 @@ exit(2);
 }
 while (i < byte)
 {
-printf("%02hhx ", data[i]);
+if (i == byte - 1)
+{
+printf("%.2x", data[i]);
+break;
+}
+printf("%.2x ", data[i]);
 i++;
 }
 printf("\n");
