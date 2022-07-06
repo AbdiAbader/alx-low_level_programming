@@ -12,7 +12,7 @@ char *o;
 int num1, num2;
 if (argc != 4)
 {
-printf("%i Error\n", argc);
+printf("Error\n");
 exit(98);
 }
 o = argv[2];
