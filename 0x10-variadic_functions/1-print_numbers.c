@@ -15,8 +15,8 @@ va_start(args, n);
 while (i < n)
 {
 printf("%i", va_arg(args, int));
-if (i != n - 1)
-printf("%s ", separator);
+if (i != n - 1 && separator != NULL)
+printf("%s", separator);
 i++;
 }
 printf("\n");
