@@ -12,6 +12,9 @@ va_list args;
 va_start(args, n);
 while (i < n)
 {
+if (va_arg(args, char *) == NULL)
+printf("(nil)");
+else
 printf("%s", va_arg(args, char *));
 if (i != n - 1 && separator != NULL)
 printf("%s", separator);
