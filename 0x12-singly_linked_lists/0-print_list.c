@@ -1,17 +1,15 @@
 #include "lists.h"
 /**
- *size_t - structure node 
+ *print_list - structure node
  *@h: head
  *Return: void
  */
 size_t print_list(const list_t *h)
 {
-  int c =0; 
-
-
+int c = 0;
 while (h != NULL)
 {
-if(h->str == NULL)
+if (h->str == NULL)
 printf("[%d] %s\n", 0, h->str);
 else
 printf("[%d] %s\n", h->len, h->str);
