@@ -18,7 +18,7 @@ free(new);
 return (NULL);
 }
 new->str = strdup(str);
-new->len = strlen(str);
+new->len = 5;
 new->next = *head;
 *head = new;
 return (new);
