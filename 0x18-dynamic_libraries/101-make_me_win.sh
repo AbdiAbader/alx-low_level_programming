@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -q-O r/librand.o https://github.com/AbdiAbader/alx-low_level_programming/tree/master/0x18-dynamic_libraries/librand.o
-export LD_PRELOAD=r/librand.o
+crul -o r/librand.so https://github.com/AbdiAbader/alx-low_level_programming/tree/master/0x18-dynamic_libraries/librand.so
+export LD_PRELOAD=r/librand.so
