@@ -27,12 +27,12 @@ free(new->value);
 strcpy(new->value, value);
 return (1);
 }
-old = new;
-new = old->next;
+new = new->next;
 }
 old->next = allocate(key ,value);
-if (old->next != NULL)
-return (1);
+if (old->next == NULL)
+return (0);
+
 return (0);
 }
 /**
