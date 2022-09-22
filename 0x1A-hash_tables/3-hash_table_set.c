@@ -20,7 +20,7 @@ hash_node_t *new;
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	for (i = index; ht->array[i]; i++)
+	if (ht->array[i])
 	{
 		if (strcmp(ht->array[i]->key, key) == 0)
 		{
