@@ -14,10 +14,10 @@ hash_node_t *new;
 if (ht  == NULL || key == NULL || value == NULL)
 return (0);
 x = key_index((const unsigned char *)key, ht->size);
- current = ht->array[x];
+current = ht->array[x];
 if (current != NULL && strcmp(current->key, key) == 0)
 {
-ht->array[x]->value = strdup(value);
+current->value = strdup(value);
 return (1);
 }
 
