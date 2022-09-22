@@ -11,6 +11,8 @@ hash_node_t *temp, *hold;
 for (i = 0 ; i < ht->size; i++)
 {
 temp = ht->array[i];
+ if (temp != NULL)
+   {
 while (temp != NULL)
 {
 hold = temp;
@@ -20,6 +22,7 @@ free(hold->value);
 free(hold);
 }
 }
+ }
 free(ht->array);
 free(ht);
 }
