@@ -27,7 +27,7 @@ return (0);
 new->key = strdup(key);
 new->value = strdup(value);
 
-new->next = current;
-current = new;
+new->next = ht->array[x];
+ht->array[x] = new;
 return (1);
 }
