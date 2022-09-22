@@ -11,14 +11,13 @@ hash_node_t *temp, *hold;
 for (i = 0 ; i < ht->size; i++)
 {
 temp = ht->array[i];
-
 while (temp != NULL)
 {
-hold = temp->next;
-free(temp->key);
-free(temp->value);
-free(temp);
-temp = hold;
+hold = temp;
+temp = temp->next;
+free(hold->key);
+free(hold->value);
+free(hold);
 }
 }
 free(ht->array);
