@@ -8,42 +8,29 @@
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-hash_node_t *new;
-	char *value_copy;
-	unsigned long int index;
+	unsigned long index;
+	unsigned long size;
+	hash_node_t *new = NULL;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
-		return (0);
+	/* return 0 if table, key or value is NULL */
+	if (ht  == NULL || key == NULL || value == NULL)
+		return (0); /* return 0 on failure */
 
-	value_copy = strdup(value);
-	if (value_copy == NULL)
-		return (0);
+	/* use key_index and determine size of table */
+	size = ht->size;
+	index = key_index((const unsigned char *)key, size);
 
-	index = key_index((const unsigned char *)key, ht->size);
-
-		if (strcmp(ht->array[index]->key, key) == 0)
-		{
-			free(ht->array[index]->value);
-			ht->array[index]->value = value_copy;
-			return (1);
-		}
-
-
+	/* allocate space for new node */
 	new = malloc(sizeof(hash_node_t));
+
 	if (new == NULL)
-	{
-		free(value_copy);
-		return (0);
-	}
+		return (0); /* return 0 on failure */
+
+	/* assign data for new node */
 	new->key = strdup(key);
-	if (new->key == NULL)
-	{
-		free(new);
-		return (0);
-	}
-	new->value = value_copy;
+	new->value = strdup(value);
 	new->next = ht->array[index];
 	ht->array[index] = new;
 
-	return (1);
+	return (1); /* return 1 on success */
 }
