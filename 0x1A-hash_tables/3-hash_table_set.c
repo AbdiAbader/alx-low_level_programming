@@ -32,7 +32,8 @@ new = new->next;
 old = allocate(key ,value);
 if (old == NULL)
 return (0);
-
+ old->next = ht->array[x];
+ ht->array[x] = old;
 return (0);
 }
 /**
