@@ -10,6 +10,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int x;
 hash_node_t *new , *old;
+if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+return (0);
 x = key_index((const unsigned char *)key, ht->size);
 new = ht->array[x]; 
 if (ht->array[x] == NULL)
