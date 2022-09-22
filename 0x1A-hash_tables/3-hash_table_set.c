@@ -9,14 +9,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long x;
-hash_node_t *new, *current;
+hash_node_t *new;
 if (ht  == NULL || key == NULL || value == NULL)
 return (0);
 x = key_index((const unsigned char *)key, ht->size);
-current = ht->array[x];
-if (current != NULL && strcmp(current->key, key) == 0)
+if (ht->array[x] != NULL && strcmp(ht->array[x]->key, key) == 0)
 {
-current->value = strdup(value);
+ht->array[x]->value = strdup(value);
 return (1);
 }
 
@@ -26,7 +25,7 @@ return (0);
 new->key = strdup(key);
 new->value = strdup(value);
 
-new->next = current;
-current = new;
+new->next = ht->array[x];
+ht->array[x] = new;
 return (1);
 }
