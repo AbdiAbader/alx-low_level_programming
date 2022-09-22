@@ -15,7 +15,7 @@ if (ht  == NULL || key == NULL || value == NULL)
 return (0);
 x = key_index((const unsigned char *)key, ht->size);
  current = ht->array[x];
-if (current != NULL && strcmp(ht->array[x]->key, key) == 0)
+if (current != NULL && strcmp(current->key, key) == 0)
 {
 ht->array[x]->value = strdup(value);
 return (1);
