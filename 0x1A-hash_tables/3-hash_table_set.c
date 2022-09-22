@@ -29,8 +29,8 @@ return (1);
 }
 new = new->next;
 }
-old->next = allocate(key ,value);
-if (old->next == NULL)
+old = allocate(key ,value);
+if (old == NULL)
 return (0);
 
 return (0);
