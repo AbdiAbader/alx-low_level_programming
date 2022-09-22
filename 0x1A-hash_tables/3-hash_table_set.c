@@ -8,29 +8,30 @@
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long index;
-	unsigned long size;
-	hash_node_t *new = NULL;
 
-	/* return 0 if table, key or value is NULL */
+	unsigned long index, size;
+	hash_node_t *new_node;
+
 	if (ht  == NULL || key == NULL || value == NULL)
-		return (0); /* return 0 on failure */
+		return (0);
 
-	/* use key_index and determine size of table */
 	size = ht->size;
 	index = key_index((const unsigned char *)key, size);
 
-	/* allocate space for new node */
-	new = malloc(sizeof(hash_node_t));
+	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
+	{
+		ht->array[index]->value = strdup(value);
+		return (1);
+	}
 
-	if (new == NULL)
-		return (0); /* return 0 on failure */
+	new_node = malloc(sizeof(hash_node_t));
 
-	/* assign data for new node */
-	new->key = strdup(key);
-	new->value = strdup(value);
-	new->next = ht->array[index];
-	ht->array[index] = new;
+	if (new_node == NULL)
+		return (0);
 
-	return (1); /* return 1 on success */
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
+	return (1);
 }
