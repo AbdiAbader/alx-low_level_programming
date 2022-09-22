@@ -7,9 +7,13 @@ if (ht  == NULL || key == NULL)
 return (NULL);
 x = key_index((const unsigned char *)key, ht->size);
 current = ht->array[x];
-if (current != NULL && strcmp(current->key, key) == 0)
+ while (current != NULL)
+   {
+if (strcmp(current->key, key) == 0)
 {
 return (current->value);
 }
+ current = current->next;
+   }
  return (NULL);
 }
