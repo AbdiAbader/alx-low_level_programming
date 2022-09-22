@@ -13,43 +13,32 @@ hash_node_t *new , *old;
 if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 return (0);
 x = key_index((const unsigned char *)key, ht->size);
-new = ht->array[x]; 
-if (ht->array[x] == NULL)
+old = ht->array[x]; 
+while (old != NULL)
 {
-ht->array[x] = allocate(key, value);
+if (strcmp(old->key, key) == 0)
+{
+free(old->value);
+strcpy(old->value, value);
 return (1);
 }
-while (new != NULL)
-{
-if (strcmp(new->key, key) == 0)
-{
-free(new->value);
-strcpy(new->value, value);
-return (1);
+old = old->next;
 }
-new = new->next;
-}
-old = allocate(key ,value);
-if (old == NULL)
-return (0);
- old->next = ht->array[x];
- ht->array[x] = old;
-return (0);
-}
-/**
-*allocate: allocate new entry
-*@key: key
-*@value: value
-*Return: new value address
-*/
-hash_node_t *allocate(const char *key, const char *value)
-{
-hash_node_t *new;
 new = malloc(sizeof(hash_node_t));
-if (new == NULL)
-return (NULL);
-new->key = strdup(key);
-new->value = strdup(value);
-new->next = NULL;
-return (new);
+	if (new == NULL)
+	{
+		
+		return (0);
+	}
+	new->key = strdup(key);
+	if (new->key == NULL)
+	{
+		free(new);
+		return (0);
+	}
+	strcpy(old->value, value);
+	new->next = ht->array[x];
+	ht->array[x] = new;
+
+	return (1);
 }
