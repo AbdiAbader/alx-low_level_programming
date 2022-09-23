@@ -133,26 +133,22 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 */
 void shash_table_print(const shash_table_t *ht)
 {
-int a = 0;
-shash_node_t *temp;
-unsigned long int i = 0;
-if (ht != NULL)
-{
-printf("{");
-for (i = 0 ; i < ht->size; i++)
-{
-temp = ht->array[i];
-while (temp != NULL)
-{
-if (a != 0)
-printf(", ");
-printf("'%s': '%s'", temp->key, temp->value);
-temp = temp->next;
-a = 87;
-}
-}
-printf("}\n");
-}
+
+	shash_node_t *node;
+
+	if (ht == NULL)
+		return;
+
+	node = ht->shead;
+	printf("{");
+	while (node != NULL)
+	{
+		printf("'%s': '%s'", node->key, node->value);
+		node = node->snext;
+		if (node != NULL)
+			printf(", ");
+	}
+	printf("}\n");
 }
 /**
 * shash_table_print_rev - reverse order.
