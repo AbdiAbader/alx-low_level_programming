@@ -31,7 +31,7 @@ return (new);
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 unsigned long x;
-shash_node_t *new ,*tmp;
+shash_node_t *new, *tmp;
 shash_node_t *current;
 if (ht  == NULL || key == NULL || value == NULL)
 return (0);
@@ -104,7 +104,7 @@ current = current->snext;
 return (NULL);
 }
 /**
-*hash_table_print - prints all hash values with key
+*shash_table_print - prints all hash values with key
 *@ht: struct poniter
 *Return: void
 */
@@ -112,16 +112,16 @@ void shash_table_print(const shash_table_t *ht)
 {
 shash_node_t *temp;
 if (ht == NULL)
-  return;
- temp = ht->shead;
+return;
+temp = ht->shead;
 printf("{");
 while (temp != NULL)
 {
 
 printf("'%s': '%s'", temp->key, temp->value);
-temp = temp->next;
- if (temp != NULL)
-   printf(", ");
+temp = temp->snext;
+if (temp != NULL)
+printf(", ");
 }
 
 printf("}\n");
