@@ -17,13 +17,17 @@ x = key_index((const unsigned char *)key, ht->size);
 current = ht->array[x];
 if (current != NULL && strcmp(current->key, key) == 0)
 {
+free(current->value);
 current->value = strdup(value);
 return (1);
 }
 
 new = malloc(sizeof(hash_node_t));
 if (new == NULL)
+{
+free(current->value);
 return (0);
+}
 new->key = strdup(key);
 new->value = strdup(value);
 
