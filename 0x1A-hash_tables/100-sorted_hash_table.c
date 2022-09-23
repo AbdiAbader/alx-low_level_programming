@@ -121,7 +121,7 @@ while (temp != NULL)
 printf("'%s': '%s'", temp->key, temp->value);
 temp = temp->next;
  if (temp != NULL)
-   print(", ");
+   printf(", ");
 }
 
 printf("}\n");
