@@ -109,21 +109,22 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-unsigned long x;
-shash_node_t *current;
-if (ht  == NULL || key == NULL)
-return (NULL);
-x = key_index((const unsigned char *)key, ht->size);
-current = ht->array[x];
-while (current != NULL)
-{
-if (strcmp(current->key, key) == 0)
-{
-return (current->value);
-}
-current = current->snext;
-}
-return (NULL);
+  
+	shash_node_t *node;
+	unsigned long int index;
+
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
+
+	index = key_index((const unsigned char *)key, ht->size);
+	if (index >= ht->size)
+		return (NULL);
+
+	node = ht->shead;
+	while (node != NULL && strcmp(node->key, key) != 0)
+		node = node->snext;
+
+	return ((node == NULL) ? NULL : node->value);
 }
 /**
 *hash_table_print - prints all hash values with key
