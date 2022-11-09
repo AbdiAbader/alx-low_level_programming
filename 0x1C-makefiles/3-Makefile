@@ -11,7 +11,4 @@ clean:
 	$(RM) *~ $(NAME)
 fclean: clean oclean
 
-re:
-	$(RM) $(OBJ)
-	$(CC) $(OBJ)
-	all
+re: oclean all
