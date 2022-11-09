@@ -4,14 +4,15 @@
 
 def island_perimeter(grid):
     """ island_perimeter """
-    s = -1
+    s = 0
     c = 0
     if len(grid) == 0:
         return 0
     else:
-        for i in grid:
+        for x, i in enumerate(grid):
+            c =0 
             for y in i:
                 if y == 1:
                     c = c + 1
-            s = s + c
+            s = (x * c) + s
         return s
