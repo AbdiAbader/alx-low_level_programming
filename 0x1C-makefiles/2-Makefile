@@ -1,7 +1,7 @@
 CC=gcc
 SRC= main.c school.c
 NAME=school
-OBJ= school.o main.o
+OBJ=$(SRCS:.c=.o)
 all : $(NAME)
 $(NAME): $(SRC)
 	$(CC) -c -o main.o main.c
