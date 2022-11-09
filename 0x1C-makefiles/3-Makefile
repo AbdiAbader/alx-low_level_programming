@@ -12,4 +12,5 @@ clean:
 fclean:
 	$(RM) $(NAME) $(OBJ) *~
 re:
-	rm -rf $(OBJECTS)
+	$(RM) $(OBJ)
+	$(CC) $(OBJ)
