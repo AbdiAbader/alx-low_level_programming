@@ -13,7 +13,7 @@ if (value < 0 || size < 1 || array == NULL)
 {
 return (-1);
 }
-for (;i < size; i++)
+for (; i < size; i++)
 {
 printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 if (array[i] == value)
